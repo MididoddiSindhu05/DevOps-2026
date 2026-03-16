@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Disaster Types • AI Disaster Prediction</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body data-page="disasters">
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+      <div class="container container-narrow">
+        <a class="navbar-brand brand-badge" href="index.html">
+          <span class="brand-dot"></span>
+          <span class="fw-bold">AI Disaster Prediction</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMain">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" data-page="index.html" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" data-page="dashboard.html" href="dashboard.html">Dashboard</a></li>
+            <li class="nav-item"><a class="nav-link" data-page="disasters.html" href="disasters.html">Disasters</a></li>
+            <li class="nav-item"><a class="nav-link" data-page="prediction.html" href="prediction.html">Predictions</a></li>
+            <li class="nav-item"><a class="nav-link" data-page="alerts.html" href="alerts.html">Alerts</a></li>
+            <li class="nav-item"><a class="nav-link" data-page="emergency.html" href="emergency.html">Emergency</a></li>
+            <li class="nav-item"><a class="nav-link" data-page="profile.html" href="profile.html">Profile</a></li>
+            <li class="nav-item" data-admin-only style="display:none">
+              <a class="nav-link" data-page="admin.html" href="admin.html">Admin</a>
+            </li>
+          </ul>
+          <div class="d-flex align-items-center gap-2">
+            <div class="small muted d-none d-lg-block" id="navUser"></div>
+            <a class="btn btn-sm btn-outline-light" data-auth="out" href="index.html#auth">Login</a>
+            <button class="btn btn-sm btn-outline-light" id="btnLogout" data-auth="in" style="display:none">
+              <i class="bi bi-box-arrow-right"></i> Logout
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container container-narrow py-4">
+      <div class="d-flex flex-wrap align-items-end justify-content-between gap-2 mb-3">
+        <div>
+          <h3 class="fw-bold mb-1">Disaster Types</h3>
+          <div class="muted">Descriptions, causes, indicators, prediction probability, and safety tips.</div>
+        </div>
+        <a class="btn btn-accent" href="prediction.html"><i class="bi bi-cpu"></i> Simulate Prediction</a>
+      </div>
+
+      <div class="row g-3">
+        <!-- Earthquake -->
+        <div class="col-lg-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="d-flex align-items-center justify-content-between">
+                <h5 class="fw-bold mb-0"><i class="bi bi-waves text-info"></i> Earthquake</h5>
+                <span class="badge-level badge-medium">Probability: 45%</span>
+              </div>
+              <p class="muted mt-2 mb-2">
+                Sudden ground shaking caused by tectonic plate movement or fault rupture.
+              </p>
+              <div class="row g-2">
+                <div class="col-12">
+                  <div class="muted small fw-bold">Causes</div>
+                  <div>Tectonic shifts, volcanic activity, induced seismicity.</div>
+                </div>
+                <div class="col-12">
+                  <div class="muted small fw-bold">Risk indicators</div>
+                  <div>Foreshocks, elevated seismic readings, plate boundary stress.</div>
+                </div>
+                <div class="col-12">
+                  <div class="muted small fw-bold">Safety tips</div>
+                  <div>Drop, cover, and hold on. Secure heavy items. Prepare an emergency kit.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Flood -->
+        <div class="col-lg-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="d-flex align-items-center justify-content-between">
+                <h5 class="fw-bold mb-0"><i class="bi bi-droplet-half text-success"></i> Flood</h5>
+                <span class="badge-level badge-high">Probability: 72%</span>
+              </div>
+              <p class="muted mt-2 mb-2">
+                Overflow of water submerging normally dry land, often driven by rainfall and river discharge.
+              </p>
+              <div class="row g-2">
+                <div class="col-12">
+                  <div class="muted small fw-bold">Causes</div>
+                  <div>Heavy rainfall, storm surge, dam failure, poor drainage.</div>
+                </div>
+                <div class="col-12">
+                  <div class="muted small fw-bold">Risk indicators</div>
+                  <div>River level spikes, saturated soil, persistent rainfall, warnings upstream.</div>
+                </div>
+                <div class="col-12">
+                  <div class="muted small fw-bold">Safety tips</div>
+                  <div>Move to higher ground. Avoid flooded roads. Turn off power if instructed.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hurricane -->
+        <div class="col-lg-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="d-flex align-items-center justify-content-between">
+                <h5 class="fw-bold mb-0"><i class="bi bi-tropical-storm text-danger"></i> Hurricane</h5>
+                <span class="badge-level badge-medium">Probability: 55%</span>
+              </div>
+              <p class="muted mt-2 mb-2">
+                Powerful rotating storm system with high winds, heavy rain, and storm surge impacts.
+              </p>
+              <div class="row g-2">
+                <div class="col-12">
+                  <div class="muted small fw-bold">Causes</div>
+                  <div>Warm ocean waters, low wind shear, organized convection.</div>
+                </div>
+                <div class="col-12">
+                  <div class="muted small fw-bold">Risk indicators</div>
+                  <div>Low pressure core, strengthening winds, satellite storm structure, sea temperature.</div>
+                </div>
+                <div class="col-12">
+                  <div class="muted small fw-bold">Safety tips</div>
+                  <div>Follow evacuation orders. Secure windows. Stock water, food, and batteries.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Wildfire -->
+        <div class="col-lg-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="d-flex align-items-center justify-content-between">
+                <h5 class="fw-bold mb-0"><i class="bi bi-fire text-warning"></i> Wildfire</h5>
+                <span class="badge-level badge-medium">Probability: 48%</span>
+              </div>
+              <p class="muted mt-2 mb-2">
+                Uncontrolled fire in vegetation areas influenced by fuel dryness, wind, and ignition sources.
+              </p>
+              <div class="row g-2">
+                <div class="col-12">
+                  <div class="muted small fw-bold">Causes</div>
+                  <div>Drought, lightning, human activity, powerline faults.</div>
+                </div>
+                <div class="col-12">
+                  <div class="muted small fw-bold">Risk indicators</div>
+                  <div>High temperature, low humidity, strong winds, dry fuel indices.</div>
+                </div>
+                <div class="col-12">
+                  <div class="muted small fw-bold">Safety tips</div>
+                  <div>Prepare defensible space. Evacuate early if advised. Wear masks for smoke.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tsunami -->
+        <div class="col-lg-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="d-flex align-items-center justify-content-between">
+                <h5 class="fw-bold mb-0"><i class="bi bi-water text-info"></i> Tsunami</h5>
+                <span class="badge-level badge-low">Probability: 22%</span>
+              </div>
+              <p class="muted mt-2 mb-2">
+                Series of large ocean waves caused by undersea earthquakes, landslides, or volcanic activity.
+              </p>
+              <div class="row g-2">
+                <div class="col-12">
+                  <div class="muted small fw-bold">Causes</div>
+                  <div>Seafloor displacement, submarine landslides, volcanic eruptions.</div>
+                </div>
+                <div class="col-12">
+                  <div class="muted small fw-bold">Risk indicators</div>
+                  <div>Strong coastal quakes, rapid sea withdrawal, siren warnings.</div>
+                </div>
+                <div class="col-12">
+                  <div class="muted small fw-bold">Safety tips</div>
+                  <div>Move inland/uphill immediately. Do not return until all-clear.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Landslide -->
+        <div class="col-lg-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="d-flex align-items-center justify-content-between">
+                <h5 class="fw-bold mb-0"><i class="bi bi-triangle-fill text-warning"></i> Landslide</h5>
+                <span class="badge-level badge-medium">Probability: 40%</span>
+              </div>
+              <p class="muted mt-2 mb-2">
+                Down-slope movement of rock/soil triggered by rain saturation, earthquakes, or slope instability.
+              </p>
+              <div class="row g-2">
+                <div class="col-12">
+                  <div class="muted small fw-bold">Causes</div>
+                  <div>Heavy rain, seismic shaking, erosion, deforestation.</div>
+                </div>
+                <div class="col-12">
+                  <div class="muted small fw-bold">Risk indicators</div>
+                  <div>Cracks in ground, leaning trees, blocked drainage, repeated rainfall.</div>
+                </div>
+                <div class="col-12">
+                  <div class="muted small fw-bold">Safety tips</div>
+                  <div>Avoid steep slopes during storms. Evacuate if cracking/rumbling occurs.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-3" id="toastHost"></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
+

@@ -1,0 +1,37 @@
+<!-- Shared navbar markup (copied into each page) -->
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+  <div class="container container-narrow">
+    <a class="navbar-brand brand-badge" href="index.html">
+      <span class="brand-dot"></span>
+      <span class="fw-bold">AI Disaster Prediction</span>
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMain">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" data-page="index.html" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" data-page="dashboard.html" href="dashboard.html">Dashboard</a></li>
+        <li class="nav-item"><a class="nav-link" data-page="disasters.html" href="disasters.html">Disasters</a></li>
+        <li class="nav-item"><a class="nav-link" data-page="prediction.html" href="prediction.html">Predictions</a></li>
+        <li class="nav-item"><a class="nav-link" data-page="alerts.html" href="alerts.html">Alerts</a></li>
+        <li class="nav-item"><a class="nav-link" data-page="emergency.html" href="emergency.html">Emergency</a></li>
+        <li class="nav-item"><a class="nav-link" data-page="profile.html" href="profile.html">Profile</a></li>
+        <li class="nav-item" data-admin-only style="display:none">
+          <a class="nav-link" data-page="admin.html" href="admin.html">Admin</a>
+        </li>
+      </ul>
+
+      <div class="d-flex align-items-center gap-2">
+        <div class="small muted d-none d-lg-block" id="navUser"></div>
+        <a class="btn btn-sm btn-outline-light" data-auth="out" href="index.html#auth">Login</a>
+        <button class="btn btn-sm btn-outline-light" id="btnLogout" data-auth="in" style="display:none">
+          <i class="bi bi-box-arrow-right"></i> Logout
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+

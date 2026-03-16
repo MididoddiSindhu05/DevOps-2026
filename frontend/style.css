@@ -1,0 +1,278 @@
+:root{
+  /* Light colorful theme */
+  --bg-0:#f6f9ff;
+  --bg-1:#eef3ff;
+
+  --card:#ffffff;
+  --card-2:#f9fbff;
+
+  --text:#1f2a44;
+  --muted:#6b7a99;
+
+  --border:rgba(0,0,0,.08);
+
+  /* Accent colors */
+  --accent:#4f8cff;
+  --accent-2:#7c5cff;
+
+  /* Status colors */
+  --good:#2fbf71;
+  --warn:#f0a500;
+  --bad:#e45858;
+}
+
+html,body{height:100%}
+
+body{
+  background: linear-gradient(135deg,#eef3ff,#fdfdff);
+  color:var(--text);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+}
+
+/* NAVBAR */
+
+.navbar{
+  background: rgba(255,255,255,.85) !important;
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+}
+
+/* Ensure navbar items are visible with light navbar background */
+.navbar .navbar-brand,
+.navbar .navbar-brand:focus,
+.navbar .navbar-brand:hover{
+  color: var(--text) !important;
+}
+
+.navbar .navbar-nav .nav-link{
+  color: rgba(31,42,68,.78) !important;
+}
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link:focus{
+  color: rgba(31,42,68,.95) !important;
+}
+.navbar .navbar-nav .nav-link.active{
+  color: rgba(31,42,68,1) !important;
+  font-weight: 700;
+}
+
+.navbar .navbar-toggler{
+  border-color: rgba(0,0,0,.18) !important;
+}
+.navbar .navbar-toggler-icon{
+  /* Dark hamburger icon (Bootstrap "navbar-light"-style) */
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2831, 42, 68, 0.9%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+.brand-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:.55rem;
+  letter-spacing:.2px;
+}
+
+.brand-dot{
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px rgba(79,140,255,.15);
+}
+
+.container-narrow{max-width:1050px}
+
+/* GLASS / CARDS */
+
+.glass{
+  background:#ffffff;
+  border:1px solid var(--border);
+  border-radius:16px;
+  box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.card{
+  background:#ffffff;
+  border:1px solid var(--border);
+  border-radius:16px;
+}
+
+.card-soft{
+  background:#f8faff;
+  border:1px solid var(--border);
+  border-radius:16px;
+}
+
+.muted{color:var(--muted)!important}
+
+/* BUTTON */
+
+.btn-accent{
+  background: linear-gradient(135deg,#4f8cff,#7c5cff);
+  border:0;
+  color:white;
+  font-weight:700;
+}
+
+.btn-accent:hover{
+  filter:brightness(1.05);
+}
+
+.btn-accent:active{
+  transform:translateY(1px);
+}
+
+/* BADGES */
+
+.badge-level{
+  border:1px solid var(--border);
+  padding:.35rem .6rem;
+  border-radius:999px;
+  font-weight:700;
+}
+
+.badge-low{
+  background:rgba(47,191,113,.12);
+  color:var(--good);
+}
+
+.badge-medium{
+  background:rgba(240,165,0,.12);
+  color:var(--warn);
+}
+
+.badge-high{
+  background:rgba(228,88,88,.12);
+  color:var(--bad);
+}
+
+/* ALERT PULSE */
+
+.pulse{
+  position:relative;
+}
+
+.pulse::after{
+  content:"";
+  position:absolute;
+  inset:-6px;
+  border-radius:18px;
+  border:1px solid rgba(228,88,88,.35);
+  animation:pulse 1.6s ease-in-out infinite;
+  pointer-events:none;
+}
+
+@keyframes pulse{
+  0%{opacity:.75;transform:scale(.98)}
+  70%{opacity:0;transform:scale(1.03)}
+  100%{opacity:0;transform:scale(1.03)}
+}
+
+/* BANNER */
+
+.banner{
+  border-radius:16px;
+  border:1px solid var(--border);
+  background:linear-gradient(135deg,#ffffff,#eef3ff);
+  overflow:hidden;
+  position:relative;
+}
+
+.banner::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.6),transparent);
+  transform:translateX(-100%);
+  animation:sweep 2.8s ease-in-out infinite;
+}
+
+@keyframes sweep{
+  0%{transform:translateX(-100%)}
+  55%{transform:translateX(100%)}
+  100%{transform:translateX(100%)}
+}
+
+/* FORM */
+
+.form-control,
+.form-select{
+  background:#ffffff;
+  border:1px solid var(--border);
+  color:var(--text);
+}
+
+.form-control:focus,
+.form-select:focus{
+  border-color:var(--accent);
+  box-shadow:0 0 0 .2rem rgba(79,140,255,.15);
+  color:var(--text);
+}
+
+/* TABLE */
+
+.table{
+  --bs-table-bg:transparent;
+  --bs-table-color:var(--text);
+  --bs-table-border-color:var(--border);
+}
+
+/* CHART */
+
+.chart-wrap{
+  height:280px;
+}
+
+.chart-tall{
+  height:340px;
+}
+
+/* MAP */
+
+#map{
+  height:320px;
+  border-radius:16px;
+  border:1px solid var(--border);
+  overflow:hidden;
+}
+
+/* FOOTER */
+
+.footer-note{
+  color:rgba(0,0,0,.6);
+  font-size:.95rem;
+}
+
+/* INDEX PAGE */
+
+/* Make login page visibly different (avoid cache confusion) */
+body[data-page="index"]{
+  background: linear-gradient(180deg, #ffffff 0%, #f1f5ff 55%, #ffffff 100%);
+}
+
+body[data-page="index"] .banner{
+  background: #ffffff;
+}
+
+body[data-page="index"] #authTabs .nav-link{
+  color:var(--muted);
+  border:1px solid var(--border);
+  background:#ffffff;
+}
+
+body[data-page="index"] #authTabs .nav-link.active{
+  color: var(--text);
+  background: #eef3ff;
+  border: 1px solid rgba(79,140,255,.35);
+}
+
+body[data-page="index"] .card-soft{
+  background:#ffffff;
+}
+
+body[data-page="index"] .glass{
+  box-shadow: 0 10px 30px rgba(31,42,68,.10);
+}
+
+body[data-page="index"] .btn-outline-light{
+  border-color:rgba(0,0,0,.2);
+}

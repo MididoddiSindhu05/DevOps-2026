@@ -1,0 +1,37 @@
+{
+  "alerts": [
+    {
+      "id": "ALRT-1001",
+      "type": "Flood",
+      "location": "Delta Region",
+      "dangerLevel": "High",
+      "message": "River levels rising rapidly. Evacuate low-lying areas immediately.",
+      "riskLevel": 82,
+      "lat": 29.55,
+      "lng": 31.25,
+      "createdAt": "2026-03-16T09:10:00.000Z"
+    },
+    {
+      "id": "ALRT-1002",
+      "type": "Wildfire",
+      "location": "Pine Ridge",
+      "dangerLevel": "Medium",
+      "message": "Dry winds increasing. Prepare go-bag and monitor official updates.",
+      "riskLevel": 61,
+      "lat": 34.75,
+      "lng": -116.2,
+      "createdAt": "2026-03-16T10:20:00.000Z"
+    },
+    {
+      "id": "ALRT-1003",
+      "type": "Earthquake",
+      "location": "Coastal Belt",
+      "dangerLevel": "Low",
+      "message": "Minor tremors detected. Review safety plan; secure heavy objects.",
+      "riskLevel": 28,
+      "lat": 37.78,
+      "lng": -122.42,
+      "createdAt": "2026-03-16T11:05:00.000Z"
+    }
+  ]
+}

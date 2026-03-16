@@ -1,0 +1,24 @@
+{
+  "users": [
+    {
+      "id": "USR-ADMIN",
+      "username": "admin",
+      "email": "admin@aidisaster.local",
+      "passwordHash": "$2a$10$sgAj7KqPOzVY9z9TgCSQ8uVYvJ8T1d2P1d3lBfF8mQY7mR.4p3uAi",
+      "role": "admin",
+      "savedAlerts": [
+        "ALRT-1001"
+      ],
+      "createdAt": "2026-03-16T00:00:00.000Z"
+    },
+    {
+      "id": "USR-898295",
+      "username": "Sindhu",
+      "email": "mididoddisindhu59@gmail.com",
+      "passwordHash": "$2a$10$YD/Zp6p4powPbt5c5vNz1.93eEvNOIezNgc0XRgyndUnD4Lndjs8S",
+      "role": "user",
+      "savedAlerts": [],
+      "createdAt": "2026-03-16T08:15:51.763Z"
+    }
+  ]
+}
