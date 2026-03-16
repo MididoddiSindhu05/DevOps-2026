@@ -1,4 +1,4 @@
-# AI Disaster Prediction & Management System (Full‑Stack Demo)
+# AI Disaster Prediction & Management System 
 
 ## Tech
 - Frontend: HTML5, CSS3, JavaScript, Bootstrap, Chart.js (CDN), Leaflet (CDN)
