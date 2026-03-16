@@ -50,3 +50,6 @@ Then open the app in your browser:
 - Alerts can be created/updated/deleted from the **Admin** page (admin only).
 - High danger alerts can trigger a **sound alarm** (mute available on Alerts/Predictions).
 
+---
+
+Repository: `DevOps-2026`
